@@ -1,92 +1,88 @@
 import Header from "../components/Header/Header";
-const HomePage = () =>{
-    return (
+import Footer  from "../components/Footer/Footer";
+//  src/pages/HomePage.jsx
+import { Link } from "react-router-dom";
 
-        <div style={{backgroundColor:" #040e34"}}>
-            <Header/>
-            <center><div style={{backgroundColor:"#000000", height:"70px", width:"900px",borderRadius:"45%"}}><h1 style={{color:"white", textAlign:"center"}}>College Data Dashboard</h1></div></center><br />
-            <center><div style={{backgroundColor:"#000000", height:"320px", justifyContent:"center", justifyItems:"center", alignContent:"center", width:"900px", borderRadius:"10px"}}><img src="\Images\viv.png" alt="logo" style={{backgroundcolor:"white", width:"90%", height:"250px"}}/></div></center>
-            <h3>Section One. Overview of Current Academic Year</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta reprehenderit dignissimos! Amet laudantium ab quibusdam dolores nulla pariatur qui, numquam, quis eos consequatur corrupti quaerat, perspiciatis veritatis nihil a.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta reprehenderit dignissimos! Amet laudantium ab qui
-            </p>
-            <hr />
-            <h3>Section Two: Key Matrics and Announcements</h3>
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta reprehenderit </p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-            </ul>
-            <p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-            <br />
-            <hr />
-            <h3>Section Three: Live Enrollment Count by Department</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dicta reprehenderit </p>
-            <center>Lorem ipsum dolor sit amet consectetur</center>
-            <center>
-            <table border="3" bordercolor="white" cellPadding="10" cellSpacing="0" width="70%">
-                <thead>
-                <tr>
-                    <th>flower</th>
-                    <th>color</th>
-                    <th>flower</th>
-                    <th>color</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>rose</td>
-                    <td>red</td>
-                    <td>rose</td>
-                    <td>red</td>
-                    
-                </tr>
-                </tbody>
 
-                <tbody>
-                <tr>
-                    <td>rose</td>
-                    <td>red</td>
-                    <td>rose</td>
-                    <td>red</td>
-                    
-                </tr>
-                </tbody>
+const HomePage = () => {
+  return (
+    <div className="pageContainer" style={{ overflow: "auto" }}>
+    
+      <div className="hero-section">
+        <img
+          src="../Images/viv.png"
+          alt="Vivekanand College Campus"
+          className="hero-banner-image"
+        />
+        <div className="hero-overlay-text">
+          {/* <h1>Welcome to Vivekanand College!</h1> */}
 
-                <tbody>
-                <tr>
-                    <td>rose</td>
-                    <td>red</td>
-                    <td>rose</td>
-                    <td>red</td>
-                    
-                </tr>
-                </tbody>
 
-                <tbody>
-                <tr>
-                    <td>rose</td>
-                    <td>red</td>
-                    <td>rose</td>
-                    <td>red</td>
-                </tr>
-                </tbody>
+          <h1 className="animate-fade-up">Welcome to Vivekanand College!</h1>
 
-                <tbody>
-                <tr>
-                    <td>rose</td>
-                    <td>red</td>
-                    <td>rose</td>
-                    <td>red</td>
-                </tr>
-                </tbody>
-            </table>
-            </center>
-            <p style={{marginleft:"200px"}}> this on job training going on!</p>
+
+
+          <p>Your journey to excellence starts here.</p>
+          <Link to="/admission" className="btn hero-btn">
+            Apply Now!
+          </Link>{" "}
         </div>
-    )
-}
+      </div>
+      <p>
+        <b>Vivekanand College</b> is a premier educational institution dedicated
+        to fostering academic excellence, innovation, and holistic development.
+        Established in 1980, we have proudly served generations of students,
+        empowering them to achieve their full potential.
+      </p>
+      <p>
+        At Vivekanand College, we believe in a vibrant learning environment that
+        extends beyond textbooks. Our state-of-the-art facilities, experienced
+        faculty, and diverse student community create a unique ecosystem where
+        curiosity thrives and future leaders are shaped.
+      </p>
+      <h2>Why Choose Vivekanand College?</h2>
+      <ul>
+        <li>
+          <b>Legacy of Excellence:</b> Decades of commitment to quality
+          education.
+        </li>
+        <li>
+          <b>Experienced Faculty:</b> Learn from renowned experts and passionate
+          educators.
+        </li>
+        <li>
+          <b>Modern Facilities:</b> Well-equipped labs, expansive library, and
+          comfortable campus.
+        </li>
+        <li>
+          <b>Holistic Development:</b> Focus on co-curricular activities,
+          sports, and community service.
+        </li>
+        <li>
+          <b>Strong Placements:</b> Excellent career opportunities with leading
+          companies.
+        </li>
+      </ul>
+    
+      <h2>Campus Life & Facilities</h2>
+      <div className="image-gallery">
+        <img
+          src="/Images/vck info.jpeg"
+          alt="Students studying in library"
+        />
+        <img src="/Images/vck.jpg" alt="Students on campus ground" />
+      </div>
+      <p>
+        Explore our vibrant campus and state-of-the-art facilities designed to
+        enhance your learning experience and personal growth.
+      </p>
+      <div className="call-to-action">
+        <p>Ready to explore our courses?</p>
+        <Link to="/courses" className="btn">
+          Explore Courses
+        </Link>{" "}
+      </div>
+    </div>
+  );
+};
 export default HomePage;
